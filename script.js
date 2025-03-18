@@ -1,14 +1,3 @@
-// Configuração básica do jogo
-const config = {
-    type: Phaser.AUTO, // Usa WebGL se disponível, caso contrário, usa Canvas
-    width: 800, // Largura da tela
-    height: 600, // Altura da tela
-    physics: { default: 'arcade', arcade: { debug: false } }, // Física arcade simples
-    scene: [MenuScene, GameScene, GameScene2, GameOverScene, WinScene] // Cenas do jogo
-};
-
-// Inicializa o jogo com a configuração acima
-const game = new Phaser.Game(config);
 
 // Cena do Menu Inicial
 class MenuScene extends Phaser.Scene {
@@ -314,3 +303,14 @@ class WinScene extends Phaser.Scene {
         });
     }
 }
+// Configuração básica do jogo
+const config = {
+    type: Phaser.AUTO, // Usa WebGL se disponível, caso contrário, usa Canvas
+    width: 800, // Largura da tela
+    height: 600, // Altura da tela
+    physics: { default: 'arcade', arcade: { debug: false } }, // Física arcade simples
+    scene: [MenuScene, GameScene, GameScene2, GameOverScene, WinScene] // Cenas do jogo
+};
+
+// Inicializa o jogo com a configuração acima
+const game = new Phaser.Game(config);
